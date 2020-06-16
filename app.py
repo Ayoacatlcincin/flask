@@ -6,6 +6,9 @@ import os
 def index():
     return render_template('index.html')
 
+@app.route('/nextPage')
+def nextPage():
+    return render_template('nextPage.html')
 
    
 

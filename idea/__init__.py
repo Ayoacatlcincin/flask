@@ -7,9 +7,9 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = "smtp.gmail.com"
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_DEFAULT_SENDER'] = "wareliteracing@gmail.com"
-app.config['MAIL_USERNAME'] = "wareliteracing@gmail.com"
-app.config['MAIL_PASSWORD'] = "Zapata99!"
+app.config['MAIL_DEFAULT_SENDER'] = "Mina.Rojas1311@gmail.com"
+app.config['MAIL_USERNAME'] = "Mina.Rojas1311@gmail.com"
+app.config['MAIL_PASSWORD'] = "ji9qp2ze"
 mail = Mail(app)
 
 basedir = os.path.abspath(os.path.dirname(__file__))
