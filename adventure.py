@@ -113,7 +113,7 @@ profile = [
     choices=['Diplomat', 'Barbarian', 'Mage', 'Theif']),
     inquirer.Text('nightmare', message = "What is your worst nightmare?")
 ]
-user = inquirer.prompt(profile, theme=GreenPassion())
+user = inquirer.prompt(profile)
 
 
 stats = base_value(user['class'])
