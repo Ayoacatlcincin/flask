@@ -59,7 +59,7 @@ def enter_store(gold):
             in_store = 'no'
     print(weapon_bought)
     print(magic_bought)
-    if weapon_bought == {} and magic_bought == {}:
+    if (weapon_bought == {} or weapon_bought == None) and (magic_bought == {} or magic_bought == None):
         return      
     else:
         items_bought = {**weapon_bought, **magic_bought}  
