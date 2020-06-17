@@ -125,8 +125,8 @@ while user['life'] == 'alive':
     elif user['location'] == 'Store':
         items_bought = enter_store(user['gold'])
         user['inventory'].update(items_bought)
-        for price in items_bought:
-            user['gold'] = user['gold'] - items_bought[price]['cost']
+        for key in items_bought.items:
+            user['gold'] = user['gold'] - items_bought[key]['cost']
         print(user)    
     elif user['location'] == 'Plaza':
         user['location'] = plaza()
