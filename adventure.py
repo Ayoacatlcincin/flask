@@ -122,8 +122,7 @@ user['charisma'] = stats['charisma']
 user['strength'] = stats['strength']
 user['magic'] = stats['magic']
 user['life'] = 'alive'
-user['inventory'] = {'knife': {'name': 'knife', 'strenght': 1},
-                     'hands': {'name': 'hands', 'strenght': 0}}
+user['inventory'] = ({'name': 'knife', 'strenght': 1, 'cost': 25},{'name': 'hands', 'strenght': 0, 'cost': 0})
 user['weapon_inuse'] = {'hands': {'name': 'hands', 'strenght': 0}}
 user['gold'] = 100
 #base scores for class D:2,6,1,1/B:1,1,6,2/M:2,1,1,6/T:6,1,2,1
