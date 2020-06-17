@@ -139,7 +139,7 @@ while user['life'] == 'alive':
     elif user['location'] == 'Store':
         items_bought = {}
         items_bought = enter_store(user['gold']) #needs if statement if no purchase
-        if items_bought != {}:
+        if items_bought != None:
             
             user['inventory'].append(items_bought)
             print(user['inventory'])
