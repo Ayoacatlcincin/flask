@@ -35,10 +35,18 @@ def village():
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
+def store():
+    print("welcome to the Store!")
+    direction = [
+        inquirer.List('go', message = "What do you want to do now?",
+        choices=['Buy items', 'Return to Village']),
+    ]
+    andale = inquirer.prompt(direction)
+    return andale['go'] 
 
 def plaza():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to Doc', 'Talk to Cow', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -46,14 +54,14 @@ def plaza():
 
 def mictlan_desert():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to Mictlan', 'Go to the Fiesta', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 
 def xochimilco():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to ferryman', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -61,7 +69,7 @@ def xochimilco():
 
 def smoking_mt_pass():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to lama', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -69,12 +77,19 @@ def smoking_mt_pass():
 
 def sea_of_cortez():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
-        choices=['Talk to Captian', 'Return to Village']),
+        inquirer.List('go', message = "What do you want to do now?",
+        choices=['Talk to Captain', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
     
+def t_to_captain():
+    direction = [
+        inquirer.List('go', message = "Hello skipper I'm the Captain of the finest and fastest ship in the Spanish Armada, Whats your buisness on LA ESPERANZA?",
+        choices=['Join te crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship']),
+    ]
+    andale = inquirer.prompt(direction)
+    return andale['go']
 
 
 
@@ -92,7 +107,7 @@ user = {}
 #user['class'] = input("What class are you? (Diplomat/Barbarian/Mage/Theif)")
 
 profile = [
-    inquirer.Text('name', message = "Hello this is dog. What is your name?"),
+    inquirer.Text('name', message = "Hello nomad I am Ehecatl. What is your name?"),
     inquirer.List('class', message = "What class are you?",
     choices=['Diplomat', 'Barbarian', 'Mage', 'Theif']),
     inquirer.Text('nightmare', message = "What is your worst nightmare?")
@@ -138,6 +153,8 @@ while user['life'] == 'alive':
         user['location'] = smoking_mt_pass()
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
+    elif user['location'] == 'Talk to Captain':
+        user['location'] = t_to_captain()
     print(user['location'])
 
 #answer = input("You wake up on a cold morning with the wind shaking the rafters. Do you want to but on a scarf or sweater? (scarf/sweater)")
