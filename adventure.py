@@ -38,7 +38,7 @@ def store():
     print("welcome to the Store!")
     direction = [
         inquirer.List('go', message = "What do you want to do know?",
-        choices=['Buy items', 'Exit Store']),
+        choices=['Buy items', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 
@@ -46,7 +46,7 @@ def store():
 def plaza():
     direction = [
         inquirer.List('go', message = "What do you want to do know?",
-        choices=['Talk to Doc', 'Talk to Cow']),
+        choices=['Talk to Doc', 'Talk to Cow', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 
@@ -121,7 +121,7 @@ print(user)
 user['location'] = 'village' 
 
 while user['life'] == 'alive':
-    if user['location'] == 'village':
+    if user['location'] == 'village' or user['location'] == 'Return to Village':
         user['location'] = village() 
     elif user['location'] == 'Store':
         user['location'] = store()
