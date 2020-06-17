@@ -1,6 +1,6 @@
 #import modules
 import inquirer
-from store import buy_weapons
+from store import buy_weapons, enter_store, buy_magic
 
 #functions
 def base_value(ch_class):
@@ -83,6 +83,13 @@ def sea_of_cortez():
     andale = inquirer.prompt(direction)
     return andale['go']
     
+def t_to_captain():
+    direction = [
+        inquirer.List('go', message = "Hello skipper I'm the Captain of the finest and fastest ship in the Spanish Armada, Whats your buisness on LA ESPERANZA?",
+        choices=['Join te crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship']),
+    ]
+    andale = inquirer.prompt(direction)
+    return andale['go']
 
 
 
@@ -131,7 +138,11 @@ while user['life'] == 'alive':
     if user['location'] == 'village' or user['location'] == 'Return to Village':
         user['location'] = village() 
     elif user['location'] == 'Store':
-        user['location'] = store()
+        items_bought = enter_store(user['gold'])
+        user['inventory'].update(items_bought)
+        for price in items_bought:
+            user['gold'] = user['gold'] - items_bought[price]['cost']
+        print(user)    
     elif user['location'] == 'Plaza':
         user['location'] = plaza()
     elif user['location'] == 'Mictlan Desert':
@@ -142,6 +153,8 @@ while user['life'] == 'alive':
         user['location'] = smoking_mt_pass()
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
+    elif user['location'] == 'Talk to Captain':
+        user['location'] = t_to_captain()
     print(user['location'])
 
 #answer = input("You wake up on a cold morning with the wind shaking the rafters. Do you want to but on a scarf or sweater? (scarf/sweater)")

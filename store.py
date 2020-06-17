@@ -7,9 +7,16 @@ def buy_weapons(gold):
     ]
     item_choosen = inquirer.prompt(answers)
     if item_choosen['item'] == 'Wooden Sword':
-        item_bought = {'name': item}
-        
-    return item_bought['item']
+        item_bought = {'name': 'Wooden Sword', 'Strenght': 2, 'cost': 100}
+    elif item_choosen['item'] == 'Slingshot':
+        item_bought = {'name': 'Slingshot', 'Strenght': 2, 'cost': 100}    
+    elif item_choosen['item'] == 'Basic Bow and Arrow':
+        item_bought = {'name': 'Basic Bow and Arrow', 'Strenght': 2, 'cost': 100}
+    elif item_choosen['item'] == 'Small Hammer':
+        item_bought = {'name': 'Small Hammer', 'Strenght': 2, 'cost': 100}
+    elif item_choosen['item'] == 'Basic Spear':
+        item_bought = {'name': 'Basic Spear', 'Strenght': 3, 'cost': 200}            
+    return item_bought
 
 def buy_magic(gold):
     answers = [
@@ -21,6 +28,8 @@ def buy_magic(gold):
     
 def enter_store(gold): 
     in_store = 'yes'
+    weapon_bought = {}
+    magic_bought = {}
     while in_store == 'yes':  
         answers = [
             inquirer.List('todo', message = "What would you like to do in our store?",
@@ -29,9 +38,13 @@ def enter_store(gold):
         action = inquirer.prompt(answers)  
         
         if action['todo'] == 'Buy a Weapon':
-            buy_weapons(gold)
+            weapon_bought = buy_weapons(gold)
+            
         elif action['todo'] == 'Buy a Magical Item':
-            buy_magic(gold) 
+            magic_bought = buy_magic(gold) 
+            
         elif action['todo'] == 'Leave Store':
             in_store = 'no'
+    items_bought = {**weapon_bought, **magic_bought}  
+    return items_bought
               
