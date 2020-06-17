@@ -1,6 +1,6 @@
 #import modules
 import inquirer
-from store import buy_weapons
+from store import buy_weapons, enter_store, buy_magic
 
 #functions
 def base_value(ch_class):
@@ -35,14 +35,6 @@ def village():
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
-def store():
-    print("welcome to the Store!")
-    direction = [
-        inquirer.List('go', message = "What do you want to do know?",
-        choices=['Buy items', 'Return to Village']),
-    ]
-    andale = inquirer.prompt(direction)
-    return andale['go'] 
 
 def plaza():
     direction = [
@@ -131,7 +123,11 @@ while user['life'] == 'alive':
     if user['location'] == 'village' or user['location'] == 'Return to Village':
         user['location'] = village() 
     elif user['location'] == 'Store':
-        user['location'] = store()
+        items_bought = enter_store(user['gold'])
+        user['inventory'].update(items_bought)
+        for price in items_bought:
+            user['gold'] = user['gold'] - items_bought[price]['cost']
+        print(user)    
     elif user['location'] == 'Plaza':
         user['location'] = plaza()
     elif user['location'] == 'Mictlan Desert':
