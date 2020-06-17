@@ -38,7 +38,7 @@ def village():
 def store():
     print("welcome to the Store!")
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Buy items', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -46,7 +46,7 @@ def store():
 
 def plaza():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to Doc', 'Talk to Cow', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -54,14 +54,14 @@ def plaza():
 
 def mictlan_desert():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to Mictlan', 'Go to the Fiesta', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 
 def xochimilco():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to ferryman', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -69,7 +69,7 @@ def xochimilco():
 
 def smoking_mt_pass():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to lama', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -77,7 +77,7 @@ def smoking_mt_pass():
 
 def sea_of_cortez():
     direction = [
-        inquirer.List('go', message = "What do you want to do know?",
+        inquirer.List('go', message = "What do you want to do now?",
         choices=['Talk to Captian', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
@@ -100,7 +100,7 @@ user = {}
 #user['class'] = input("What class are you? (Diplomat/Barbarian/Mage/Theif)")
 
 profile = [
-    inquirer.Text('name', message = "Hello this is dog. What is your name?"),
+    inquirer.Text('name', message = "Hello nomad I am Ehecatl. What is your name?"),
     inquirer.List('class', message = "What class are you?",
     choices=['Diplomat', 'Barbarian', 'Mage', 'Theif']),
     inquirer.Text('nightmare', message = "What is your worst nightmare?")
