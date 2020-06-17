@@ -78,7 +78,7 @@ def smoking_mt_pass():
 def sea_of_cortez():
     direction = [
         inquirer.List('go', message = "What do you want to do now?",
-        choices=['Talk to Captian', 'Return to Village']),
+        choices=['Talk to Captain', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
