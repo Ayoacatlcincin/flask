@@ -138,10 +138,10 @@ while user['life'] == 'alive':
         user['location'] = village() 
     elif user['location'] == 'Store':
         items_bought = enter_store(user['gold'])
-        user['inventory'].update(items_bought)
+        user['inventory'].append(items_bought)
         print(user['inventory'])
         print(items_bought)
-        for key in items_bought.items:
+        for i in items_bought:
             user['gold'] = user['gold'] - items_bought[key]['cost']
         print(user)    
     elif user['location'] == 'Plaza':
