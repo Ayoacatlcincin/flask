@@ -137,12 +137,16 @@ while user['life'] == 'alive':
     if user['location'] == 'village' or user['location'] == 'Return to Village':
         user['location'] = village() 
     elif user['location'] == 'Store':
-        items_bought = enter_store(user['gold'])
-        user['inventory'].append(items_bought)
-        print(user['inventory'])
-        print(items_bought)
-        user['gold'] = user['gold'] - items_bought['cost']
-        print(user)    
+        items_bought = {}
+        items_bought = enter_store(user['gold']) #needs if statement if no purchase
+        if items_bought != {}:
+            
+            user['inventory'].append(items_bought)
+            print(user['inventory'])
+            print(items_bought)
+            user['gold'] = user['gold'] - items_bought['cost']
+            print(user)  
+        user['location'] = 'village'
     elif user['location'] == 'Plaza':
         user['location'] = plaza()
         
