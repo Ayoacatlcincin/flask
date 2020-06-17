@@ -140,6 +140,8 @@ while user['life'] == 'alive':
     elif user['location'] == 'Store':
         items_bought = enter_store(user['gold'])
         user['inventory'].update(items_bought)
+        print(user['inventory'])
+        print(items_bought)
         for key in items_bought.items:
             user['gold'] = user['gold'] - items_bought[key]['cost']
         print(user)    
