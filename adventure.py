@@ -135,8 +135,7 @@ while user['life'] == 'alive':
         user['location'] = smoking_mt_pass()
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
-
-
+    print(user['location'])
 
 #answer = input("You wake up on a cold morning with the wind shaking the rafters. Do you want to but on a scarf or sweater? (scarf/sweater)")
 
