@@ -57,6 +57,8 @@ def enter_store(gold):
             
         elif action['todo'] == 'Leave Store':
             in_store = 'no'
+    print(weapon_bought)
+    print(magic_bought)
     if weapon_bought == {} and magic_bought == {}:
         return      
     else:
