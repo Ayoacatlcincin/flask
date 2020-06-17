@@ -28,6 +28,8 @@ def buy_magic(gold):
     
 def enter_store(gold): 
     in_store = 'yes'
+    weapon_bought = {}
+    magic_bought = {}
     while in_store == 'yes':  
         answers = [
             inquirer.List('todo', message = "What would you like to do in our store?",
