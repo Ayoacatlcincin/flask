@@ -86,7 +86,7 @@ def sea_of_cortez():
 def t_to_captain():
     direction = [
         inquirer.List('go', message = "Hello skipper I'm the Captain of the finest and fastest ship in the Spanish Armada, Whats your buisness on LA ESPERANZA?",
-        choices=['Join te crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship']),
+        choices=['Join te crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship', 'Stop talking to Captian']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
@@ -146,16 +146,30 @@ while user['life'] == 'alive':
         print(user)    
     elif user['location'] == 'Plaza':
         user['location'] = plaza()
+        
     elif user['location'] == 'Mictlan Desert':
         user['location'] = mictlan_desert()
+
     elif user['location'] == 'Xochimilco':
         user['location'] = xochimilco()
+
     elif user['location'] == 'Smoking Mountain Pass':
         user['location'] = smoking_mt_pass()
+
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
     elif user['location'] == 'Talk to Captain':
         user['location'] = t_to_captain()
+    elif user['location'] == 'Join the crew':
+        user['location'] = join_the_crew()
+    elif user['location'] == 'Fight the Captain':
+        user['location'] = fight_the_captain()
+    elif user['location'] == 'Barter for Passage':
+        user['location'] = barter_for_passage()
+    elif user['location'] == 'Inspect the Ship':
+        user['location'] = i_the_ship
+    elif user['location'] == 'Stop talking to Captain':
+        user['location'] = s_t_to_captain()
     print(user['location'])
 
 #answer = input("You wake up on a cold morning with the wind shaking the rafters. Do you want to but on a scarf or sweater? (scarf/sweater)")
