@@ -35,8 +35,8 @@ def village():
     andale = inquirer.prompt(direction)
     return andale
 def store():
-     print("welcome to the Store!")
-     direction = [
+    print("welcome to the Store!")
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Buy items', 'Exit Store']),
     ]
@@ -44,7 +44,7 @@ def store():
     return andale 
 
 def plaza():
-     direction = [
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Talk to Doc', 'Talk to Cow']),
     ]
@@ -52,14 +52,14 @@ def plaza():
     return andale 
 
 def mictlan_desert():
-     direction = [
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Talk to Mictlan', 'Go to the Fiesta', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale 
- def xochimilco():
-     direction = [
+def xochimilco():
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Talk to ferryman', 'Return to Village']),
     ]
@@ -67,7 +67,7 @@ def mictlan_desert():
     return andale 
 
 def smoking_mt_pass():
-     direction = [
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Talk to lama', 'Return to Village']),
     ]
@@ -75,7 +75,7 @@ def smoking_mt_pass():
     return andale 
 
 def sea_of_cortez():
-     direction = [
+    direction = [
         inquirer.List('go', message = "What do you want to do know?",
         choices=['Talk to Captian', 'Return to Village']),
     ]
