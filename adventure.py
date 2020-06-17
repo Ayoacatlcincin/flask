@@ -1,5 +1,6 @@
 #import modules
 import inquirer
+from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
 
 #functions
@@ -112,7 +113,7 @@ profile = [
     choices=['Diplomat', 'Barbarian', 'Mage', 'Theif']),
     inquirer.Text('nightmare', message = "What is your worst nightmare?")
 ]
-user = inquirer.prompt(profile)
+user = inquirer.prompt(profile, theme=GreenPassion())
 
 
 stats = base_value(user['class'])
