@@ -103,7 +103,7 @@ def join_the_crew():
 def fight_the_captain(user, captain):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
     print("The Captain atacks with " +  str(captain['power']) + ".")
-    return "sea_of_cortez"
+    return "Sea of Cortez"
 
 def barter_for_passage():
     direction = [
