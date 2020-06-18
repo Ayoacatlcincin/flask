@@ -93,7 +93,7 @@ def t_to_captain():
     return andale['go']
 def join_the_crew():
     direction = [
-        inquirer.List('go', message = "Welcome to the crew Ensign" + user['name'] + "! What say you?",
+        inquirer.List('go', message = "Welcome to the crew Ensign " + user['name'] + "! What say you?",
         choices=['Set sail Captian', 'Lets stay at Port', 'Search the Ship']),
     ]
     andale = inquirer.prompt(direction)
