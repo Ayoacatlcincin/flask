@@ -102,7 +102,7 @@ def join_the_crew():
 #idk if 'go' will work here since it stops at fight and theres no change to another direction
 def fight_the_captain(user, captain):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
-    print("The Captain atacks with " +  captain['power'] + ".")
+    print("The Captain atacks with " +  str(captain['power']) + ".")
     return
 
 def barter_for_passage():
