@@ -98,8 +98,20 @@ def join_the_crew():
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
-
-
+#idk if 'go' will work here since it stops at fight and theres no change to another direction
+def fight_the_captain():
+    direction = [
+        inquirer.Text('go', message = "So its a fight you want " + user['name'] + ", then it's a fight you'll get?",
+    ]
+    andale = inquirer.prompt(direction)
+    return andale['go']
+def barter_for_passage():
+    direction = [
+        inquirer.List('go', message = "It will be 40 gold to get passsage on La Esperanza",
+        choices=['Magic a rock into 40 gold', 'Give Captain 30 gold', 'Give Captain 40 gold', 'Give Captain 20 gold']),
+    ]
+    andale = inquirer.prompt(direction)
+    return andale['go']
 
 
 
