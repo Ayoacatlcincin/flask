@@ -87,7 +87,7 @@ def sea_of_cortez():
 def t_to_captain():
     direction = [
         inquirer.List('go', message = "Hello land lover I'm the Captain of the finest and fastest ship in the Spanish Armada, Whats your buisness on LA ESPERANZA?",
-        choices=['Join te crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship', 'Stop talking to Captian']),
+        choices=['Join the Crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship', 'Stop talking to Captian']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
@@ -169,7 +169,7 @@ while user['life'] == 'alive':
         user['location'] = sea_of_cortez()
     elif user['location'] == 'Talk to Captain':
         user['location'] = t_to_captain()
-    elif user['location'] == 'Join the crew':
+    elif user['location'] == 'Join the Crew':
         user['location'] = join_the_crew()
     elif user['location'] == 'Fight the Captain':
         user['location'] = fight_the_captain()
