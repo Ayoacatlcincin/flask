@@ -2,6 +2,7 @@
 import inquirer
 from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
+from npc import * 
 
 #functions
 def base_value(ch_class):
@@ -99,12 +100,11 @@ def join_the_crew():
     andale = inquirer.prompt(direction)
     return andale['go']
 #idk if 'go' will work here since it stops at fight and theres no change to another direction
-def fight_the_captain():
-    direction = [
-        inquirer.Text('go', message = "So its a fight you want " + user['name'] + ", then it's a fight you'll get?",
-    ]
-    andale = inquirer.prompt(direction)
-    return andale['go']
+def fight_the_captain(user, captain):
+    print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
+    print("The Captain atacks with " +  captain['40' + "."])
+    return
+
 def barter_for_passage():
     direction = [
         inquirer.List('go', message = "It will be 40 gold to get passsage on La Esperanza",
@@ -118,11 +118,6 @@ def barter_for_passage():
 
 #variables
 user = {}
-
-#creating user profile
-#user['name'] = input("Hello what is your name?")
-#print(user)
-#user['class'] = input("What class are you? (Diplomat/Barbarian/Mage/Theif)")
 
 profile = [
     inquirer.Text('name', message = "Hello traveler I am Ehecatl. What is your name?"),
@@ -184,7 +179,9 @@ while user['life'] == 'alive':
     elif user['location'] == 'Join the Crew':
         user['location'] = join_the_crew()
     elif user['location'] == 'Fight the Captain':
-        user['location'] = fight_the_captain()
+        user['location'] = fight_the_captain(user, captain)
+
+    
     elif user['location'] == 'Barter for Passage':
         user['location'] = barter_for_passage()
     elif user['location'] == 'Inspect the Ship':
