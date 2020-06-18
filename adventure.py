@@ -88,14 +88,14 @@ def sea_of_cortez():
 def t_to_captain():
     direction = [
         inquirer.List('go', message = "Hello land lover I'm the Captain of the finest and fastest ship in the Spanish Armada, Whats your buisness on LA ESPERANZA?",
-        choices=['Join the Crew', 'Fight the Captian', 'Barter for Passage', 'Inspect the Ship', 'Stop talking to Captian']),
+        choices=['Join the Crew', 'Fight the Captain', 'Barter for Passage', 'Inspect the Ship', 'Stop talking to Captian']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
 def join_the_crew():
     direction = [
         inquirer.List('go', message = "Welcome to the crew Ensign " + user['name'] + "! What say you?",
-        choices=['Set sail Captian', 'Lets stay at Port', 'Search the Ship']),
+        choices=['Set sail Captain', 'Lets stay at Port', 'Search the Ship']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
