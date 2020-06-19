@@ -102,7 +102,14 @@ def join_the_crew():
 #idk if 'go' will work here since it stops at fight and theres no change to another direction
 def fight_the_captain(user, captain):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
-    print("The Captain atacks with " +  str(captain['power']) + ".")
+    print("The Captain atacks with " +  str(captain['power']) + " power.")
+    print(user)
+    power = user['strength'] + user['magic'] 
+    print("You attack with " + str(power) + " power.")
+    if power >= captain['power']:
+        print("You defeated te Captain!")
+    else: 
+        print("You have been deafeated by the Captain!")
     return "Sea of Cortez"
 
 def barter_for_passage():
