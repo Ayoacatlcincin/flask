@@ -106,7 +106,7 @@ def fight_the_captain(user, captain):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
     print("The Captain atacks with " +  str(captain['power']) + " power.")
     print(user)
-    power = (user['strength'] + user['magic']) * random.random(0.9, 1.5)
+    power = (user['strength'] + user['magic']) * random.uniform(0.9, 1.5)
     print("You attack with " + str(power) + " power.")
     if power >= captain['power']:
         print("You defeated te Captain!")
