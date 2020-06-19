@@ -12,7 +12,7 @@
 {'name': 'Mictlan', 'power': 50, 'nightmare': 'wind', 
 'drop': [{'name': 'Mystic staf', 'magic': 10}], 'weapon_inuse': {'spider_bones': {'name': 'spider_bones', 'magic': 10 }}, 'gold': 1000}
 
-captain = {'name': 'Captain', 'power': 40, 'nightmare': 'earth', 'gold' : 250,
+captain = {'name': 'Captain', 'power': 5, 'nightmare': 'earth', 'gold' : 250,
 'drop': {'name': 'conche', 'strength': 10, 'cost': 200}}
 # secret items: 'weapon_inuse': {'name': 'saber', 'strength': 10 }
 

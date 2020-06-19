@@ -3,6 +3,7 @@ import inquirer
 from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
 from npc import * 
+import random
 
 #functions
 def base_value(ch_class):
@@ -99,12 +100,13 @@ def join_the_crew():
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
+
 #idk if 'go' will work here since it stops at fight and theres no change to another direction
 def fight_the_captain(user, captain):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
     print("The Captain atacks with " +  str(captain['power']) + " power.")
     print(user)
-    power = user['strength'] + user['magic'] 
+    power = (user['strength'] + user['magic']) * random.random(0.9, 1.5)
     print("You attack with " + str(power) + " power.")
     if power >= captain['power']:
         print("You defeated te Captain!")
