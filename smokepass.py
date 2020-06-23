@@ -22,4 +22,4 @@ def fight_the_mountain_troll(user, mountain_troll):
         print("You defeated the Mountain Troll!")
     else: 
         print("You have been deafeated by the Mountain Troll!")
-    return "Smokey Moutain Pass"
+    return "Smokey Mountain Pass"
