@@ -183,9 +183,9 @@ while user['life'] == 'alive':
     elif user['location'] == 'Smoking Mountain Pass':
         user['location'] = smoking_mt_pass()
     elif user['location'] == 'Listen to advise from Llama':
-        user['location'] = talk_to_llama()
+        user['location'] = talk_to_llama(user)
     elif user['location'] == 'Fight the Mountain Troll':
-        user['location'] = fight_the_mountain_troll()    
+        user['location'] = fight_the_mountain_troll(user, mountain_troll)    
         
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
