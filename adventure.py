@@ -75,7 +75,7 @@ def xochimilco():
 def smoking_mt_pass():
     direction = [
         inquirer.List('go', message = "What do you want to do now?",
-        choices=['Talk to llama', 'Fight the Mountain Troll' 'Return to Village']),
+        choices=['Talk to llama', 'Fight the Mountain Troll', 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 

@@ -6,7 +6,7 @@ def talk_to_llama(user):
     print('Welcome to the Smokey Mountain Pass' + user['name'] + '! The pass is the only known route to reach the Northern Territories. very few have made it to the other side and much less have made it back. I am one of those that did. Let me guide you.')
     answer = [
         inquirer.List('go', message = "What do you want to do now?",
-        choices=['Listen to advise from Llama', 'Do not listen and head into pass' 'Smoking Mountain Pass']),
+        choices=['Listen to advise from Llama', 'Do not listen and head into pass', 'Smoking Mountain Pass']),
     ]
     andale = inquirer.prompt(answer)
     return andale['go']
