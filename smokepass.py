@@ -13,10 +13,10 @@ def talk_to_llama(user):
 
 def fight_the_mountain_troll(user, mountain_troll):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
-    print("The Captain atacks with " +  str(mountain_troll['power']) + " power.")
+    print("The Mountain Troll atacks with " +  str(mountain_troll['power']) + " power.")
     print(user)
-    print(user['weapon_inuse'][0]['strenght'])
-    power = (user['strength'] + user['magic'] + user['weapon_inuse'][0]['strenght']) * random.uniform(0.9, 1.5)
+    print(user['weapon_inuse']['strenght'])
+    power = (user['strength'] + user['magic'] + user['weapon_inuse']['strenght']) * random.uniform(0.9, 1.5)
     print("You attack with " + str(power) + " power.")
     if power >= mountain_troll['power']:
         print("You defeated the Mountain Troll!")
