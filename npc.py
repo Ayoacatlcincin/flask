@@ -16,6 +16,10 @@ captain = {'name': 'Captain', 'power': 5, 'nightmare': 'earth', 'gold' : 250,
 'drop': {'name': 'conche', 'strength': 10, 'cost': 200}}
 # secret items: 'weapon_inuse': {'name': 'saber', 'strength': 10 }
 
+mountain_troll = {'name': 'Mountain Troll', 'power': 10, 'nightmare': 'rain', 'gold' : 350,
+'drop': {'name': 'Axe', 'strength': 10, 'cost': 200}}
+# secret items: 'weapon_inuse': {'name': 'saber', 'strength': 10 }
+
 {'name': 'Iztaccihuatl', 'power': 30, 'nightmare': 'water', 
 'drop': [{'name': 'Mystic staf', 'magic': 10}], 'weapon_inuse': {'obsidian_pendant': {'name': 'obsidian_pendant', 'charisma': 10 }}, 'gold': 200}
 

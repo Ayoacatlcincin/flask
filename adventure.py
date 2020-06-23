@@ -3,6 +3,7 @@ import inquirer
 from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
 from weapons import select_weapon
+from smokepass import talk_to_llama
 from npc import * 
 import random
 
@@ -74,7 +75,7 @@ def xochimilco():
 def smoking_mt_pass():
     direction = [
         inquirer.List('go', message = "What do you want to do now?",
-        choices=['Talk to lama', 'Return to Village']),
+        choices=['Talk to llama', 'Fight the Mountain Troll' 'Return to Village']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go'] 
@@ -181,7 +182,9 @@ while user['life'] == 'alive':
 
     elif user['location'] == 'Smoking Mountain Pass':
         user['location'] = smoking_mt_pass()
-
+    elif user['location'] == 'Listen to advise from Llama':
+        user['location'] = talk_to_llama()
+        
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
     elif user['location'] == 'Select Weapon from Inventory':
