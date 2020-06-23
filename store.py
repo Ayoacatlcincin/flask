@@ -13,15 +13,15 @@ def buy_weapons(gold):
         if item_choosen['item'] == 'Nevermind I changed my mind':
             return
         elif item_choosen['item'] == 'Wooden Sword':
-            item_bought = {'name': 'Wooden Sword', 'Strenght': 2, 'cost': 100}
+            item_bought = {'name': 'Wooden Sword', 'strenght': 2, 'cost': 100}
         elif item_choosen['item'] == 'Slingshot':
-            item_bought = {'name': 'Slingshot', 'Strenght': 2, 'cost': 100}    
+            item_bought = {'name': 'Slingshot', 'strenght': 2, 'cost': 100}    
         elif item_choosen['item'] == 'Basic Bow and Arrow':
-            item_bought = {'name': 'Basic Bow and Arrow', 'Strenght': 2, 'cost': 100}
+            item_bought = {'name': 'Basic Bow and Arrow', 'strenght': 2, 'cost': 100}
         elif item_choosen['item'] == 'Small Hammer':
-            item_bought = {'name': 'Small Hammer', 'Strenght': 2, 'cost': 100}
+            item_bought = {'name': 'Small Hammer', 'strenght': 2, 'cost': 100}
         elif item_choosen['item'] == 'Basic Spear':
-            item_bought = {'name': 'Basic Spear', 'Strenght': 3, 'cost': 200}   
+            item_bought = {'name': 'Basic Spear', 'strenght': 3, 'cost': 200}   
             
         if item_bought['cost'] <= gold:
             return item_bought
