@@ -185,7 +185,8 @@ while user['life'] == 'alive':
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
     elif user['location'] == 'Select Weapon from Inventory':
-        user['weapon_inuse'] = select_weapon(user)    
+        user['weapon_inuse'] = select_weapon(user)
+        user['location'] = 'village'    
     elif user['location'] == 'Talk to Captain':
         user['location'] = t_to_captain()
     elif user['location'] == 'Join the Crew':
