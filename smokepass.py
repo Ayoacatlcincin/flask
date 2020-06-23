@@ -3,7 +3,7 @@ from npc import mountain_troll
 import random
 
 def talk_to_llama(user):
-    print('Welcome to the Smokey Mountain Pass' + user['name'] + '! The pass is the only known route to reach the Northern Territories. very few have made it to the other side and much less have made it back. I am one of those that did. Let me guide you.')
+    print('Welcome to the Smoking Mountain Pass' + user['name'] + '! The pass is the only known route to reach the Northern Territories. very few have made it to the other side and much less have made it back. I am one of those that did. Let me guide you.')
     answer = [
         inquirer.List('go', message = "What do you want to do now?",
         choices=['Listen to advise from Llama', 'Do not listen and head into pass', 'Smoking Mountain Pass']),
@@ -22,4 +22,4 @@ def fight_the_mountain_troll(user, mountain_troll):
         print("You defeated the Mountain Troll!")
     else: 
         print("You have been deafeated by the Mountain Troll!")
-    return "Smokey Mountain Pass"
+    return "Smoking Mountain Pass"
