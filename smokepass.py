@@ -11,14 +11,14 @@ def talk_to_llama(user):
     andale = inquirer.prompt(answer)
     return andale['go']
 
-def fight_the_mountain_troll(user, moutain_troll):
+def fight_the_mountain_troll(user, mountain_troll):
     print("So its a fight you want " + user['name'] + ", then it's a fight you'll get?")
-    print("The Captain atacks with " +  str(moutain_troll['power']) + " power.")
+    print("The Captain atacks with " +  str(mountain_troll['power']) + " power.")
     print(user)
     print(user['weapon_inuse'][0]['strenght'])
     power = (user['strength'] + user['magic'] + user['weapon_inuse'][0]['strenght']) * random.uniform(0.9, 1.5)
     print("You attack with " + str(power) + " power.")
-    if power >= moutain_troll['power']:
+    if power >= mountain_troll['power']:
         print("You defeated the Mountain Troll!")
     else: 
         print("You have been deafeated by the Mountain Troll!")
