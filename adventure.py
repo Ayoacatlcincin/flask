@@ -3,7 +3,7 @@ import inquirer
 from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
 from weapons import select_weapon
-from smokepass import talk_to_llama
+from smokepass import talk_to_llama, fight_the_mountain_troll
 from npc import * 
 import random
 
@@ -184,6 +184,8 @@ while user['life'] == 'alive':
         user['location'] = smoking_mt_pass()
     elif user['location'] == 'Listen to advise from Llama':
         user['location'] = talk_to_llama()
+    elif user['location'] == 'Fight the Mountain Troll':
+        user['location'] = fight_the_mountain_troll()    
         
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
