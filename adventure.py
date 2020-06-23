@@ -2,6 +2,7 @@
 import inquirer
 from inquirer.themes import GreenPassion
 from store import buy_weapons, enter_store, buy_magic
+from weapons import select_weapon
 from npc import * 
 import random
 
@@ -34,7 +35,7 @@ def base_value(ch_class):
 def village():
     direction = [
         inquirer.List('go', message = "Where do you want to go?",
-        choices=['Store', 'Plaza', 'Mictlan Desert', 'Xochimilco', 'Smoking Mountain Pass', 'Sea of Cortez']),
+        choices=['Store', 'Plaza', 'Mictlan Desert', 'Xochimilco', 'Smoking Mountain Pass', 'Sea of Cortez', 'Select Weapon from Inventory']),
     ]
     andale = inquirer.prompt(direction)
     return andale['go']
@@ -183,6 +184,8 @@ while user['life'] == 'alive':
 
     elif user['location'] == 'Sea of Cortez':
         user['location'] = sea_of_cortez()
+    elif user['location'] == 'Select Weapon from Inventory':
+        user['location'] = sea_of_cortez()    
     elif user['location'] == 'Talk to Captain':
         user['location'] = t_to_captain()
     elif user['location'] == 'Join the Crew':
